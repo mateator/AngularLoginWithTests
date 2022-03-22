@@ -1,0 +1,152 @@
+.container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  background-image: url('../assets/img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#login {
+  width: 400px;
+  height: 480px;
+  text-align: center;
+  box-shadow: none;
+  //para el responsive en vez de alternar entre displays none y block y tener duplicados de la img y h3,
+  // empleo 2 ion-cards, #login y #credentials donde #login tendrá fondo transparente en mobile
+  --background: transparent;
+}
+
+//separamos el contenido horizontalmente, uno a cada extremo
+#reminder {
+  justify-content: space-between;
+}
+
+#reminder p {
+  color: #353535;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+//asignamos borde a todos menos al row del toggle
+#grid ion-row:not(:nth-child(3)) {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+#grid, #grid ion-col {
+  padding: 0;
+  color: #aaaaaa;
+}
+
+#grid ion-label {
+  font-size: 14px;
+  --color: #aaaaaa;
+}
+
+//modificaciones hijos impares y sus iconos internos
+#grid ion-col:nth-child(odd) {
+  text-align: center;
+  margin: auto;
+
+  ion-icon {
+    font-size: 2em;
+  }
+}
+
+#logo {
+  width: 130px;
+  height: 130px;
+//margin: arriba derecha abajo izq;
+  margin: 2.5em auto 3em auto;
+  object-fit: cover;
+  object-position:left;
+}
+
+//h3 adjacente al logo
+#logo + h3 {
+  margin-top: 1.2em;
+}
+
+.title{
+  display: none;
+  margin-top: 1em;
+  color: #353535;
+  font-weight: 600;
+}
+
+
+
+#submit{
+  //para poder emplear minúsculas dentro del botón
+  text-transform: none;
+
+  width: 100%;
+  height: 55px;
+  margin: 0;
+  background-color: #0279c8;
+  //modificaciones a atributos/vars de ionic
+  --border-radius:0;
+  --border-color:#0279c8;
+
+
+  .buttonContent {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.responsiveContainer{
+//padding: arriba derecha abajo izq;
+  padding: 0.5em 1.2em 0 1.2em;
+}
+
+@media screen and (min-width:960px) {
+  //Desktop view
+  .container{
+    align-items: center;
+    // si se quisiera dar un límite a la redimensión de la imagen de fondo y centrarla descomentar:
+    // max-width: 1920px;
+    // margin: auto;
+
+    #logo{
+      margin-bottom: 0;
+    }
+
+    #login{
+      --background: white;
+
+      ion-card:last-child{
+        box-shadow: none;
+      }
+      .title{
+        display: block;
+      }
+    }
+
+    #submit{
+      width: 40%;
+      height: 40px;
+      background-color: white;
+      margin-top: 1.8em;
+      --border-radius: 50px;
+
+      .buttonContent{
+        color: black;
+      font-size: 16px;
+
+      }
+    }
+
+    #submit:hover{
+      background-color: #0279c8;
+      border-radius: 50px;
+      .buttonContent{
+        color: white;
+
+      }
+    }
+  }
+}
