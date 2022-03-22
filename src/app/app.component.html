@@ -1,15 +1,13 @@
 <ion-content>
   <div class="container">
     <ion-card id="login">
-        <!-- <ion-img src="https://static.platzi.com/media/user_upload/jest-79b97d73-5c86-422e-a85d-d2ac5ffe890e.jpg" id="logo"></ion-img> -->
-
-        <ion-img src="../assets/img/logo.jpg" id="logo"></ion-img>
+      <ion-img src="../assets/img/logo.jpg" id="logo"></ion-img>
       <div>
 
         <h3 class="title">Prueba técnica</h3>
       </div>
       <ion-card id="credentials">
-        <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)" >
+        <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
           <ion-grid id="grid">
             <div class="responsiveContainer">
               <ion-row>
@@ -20,7 +18,8 @@
                 <ion-col size="10.5" size-sm="11">
                   <ion-item lines="none">
                     <ion-label position="floating">Email</ion-label>
-                    <ion-input type="email" pattern=".{1,}[@]{1}.{1,}[.]{1}.{2,}" formControlName="email" required  > </ion-input>
+                    <ion-input type="email" pattern=".{1,}[@]{1}.{1,}[.]{1}.{2,}" formControlName="email" required>
+                    </ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>
@@ -33,18 +32,19 @@
                 <ion-col size="10.5" size-sm="11">
                   <ion-item lines="none">
                     <ion-label position="floating">Contraseña</ion-label>
-                    <ion-input type="password" pattern=".{5,}"  formControlName="password" required  > </ion-input>
+                    <ion-input type="password" pattern=".{5,}" formControlName="password" required> </ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>
 
               <ion-row id="reminder">
                 <p>Recordar</p>
-                <ion-toggle color="medium" formControlName="toggle"  checked></ion-toggle>
+                <ion-toggle color="medium" formControlName="toggle" checked></ion-toggle>
               </ion-row>
             </div>
 
-            <ion-button type="submit" shape="round" fill="outline" id="submit"> <span class="buttonContent"> Acceder </span>
+            <ion-button type="submit" shape="round" fill="outline" id="submit"> <span class="buttonContent"> Acceder
+              </span>
             </ion-button>
 
           </ion-grid>
