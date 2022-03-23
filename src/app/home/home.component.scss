@@ -1,0 +1,163 @@
+$buttonColor :#0279c8;
+$backgroundColor:white;
+$borderColor:#d7d7d7;
+$lightTextColor:#aaaaaa;
+$strongTextColor:#353535;
+
+.container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  background-image: url('../../assets/img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login {
+  width: 28.57em;
+  min-height: 34.285em;
+  height: fit-content;
+  text-align: center;
+  box-shadow: none;
+  //para el responsive en vez de alternar entre displays none y block y tener duplicados de la img y h3,
+  // empleo 2 ion-cards, .login y .credentials donde .login tendrá fondo transparente en mobile
+  --background: transparent;
+}
+
+//separamos el contenido horizontalmente, uno a cada extremo
+.reminder {
+  justify-content: space-between;
+}
+
+.reminder p {
+  color: $strongTextColor;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+//asignamos borde a todos menos al row del toggle
+.grid ion-row:not(:nth-child(3)) {
+  border-bottom: 1px solid $borderColor;
+}
+
+.grid,
+.grid ion-col {
+  padding: 0;
+  color: $lightTextColor;
+}
+
+.grid ion-label {
+  font-size: 0.875em;
+  //var ionic
+  --color: #949494;
+}
+
+//modificaciones hijos impares y sus iconos internos
+.grid ion-col:nth-child(odd) {
+  text-align: center;
+  margin: auto;
+
+  ion-icon {
+    font-size: 2em;
+  }
+}
+
+.logo {
+  width: 9.28em;
+  height: 9.28em;
+  //margin: arriba derecha abajo izq;
+  margin: 2.5em auto 3em auto;
+  object-fit: cover;
+  object-position: left;
+}
+
+//h3 adjacente al logo
+.logo + h3 {
+  margin-top: 1.2em;
+}
+
+.title {
+  display: none;
+  margin-top: 1em;
+  color: $strongTextColor;
+  font-weight: 600;
+}
+
+.submit {
+  //para poder emplear minúsculas dentro del botón
+  text-transform: none;
+
+  width: 100%;
+  height: 3.93em;
+  margin: 0;
+  background-color: $buttonColor;
+  //modificaciones a atributos/vars de ionic
+  --border-radius: 0;
+  --border-color: $buttonColor;
+
+  .buttonContent {
+    color: $backgroundColor;
+    font-weight: bold;
+  }
+}
+
+.responsiveContainer {
+  //padding: arriba derecha abajo izq;
+  padding: 0.5em 1.2em 0 1.2em;
+}
+
+.error{
+  position: relative;
+  top: -10px;
+}
+
+@media screen and (min-width: 960px) {
+  //Desktop view
+  .container {
+    align-items: center;
+    // si se quisiera dar un límite a la redimensión de la imagen de fondo y centrarla descomentar:
+    // max-width: 1920px;
+    // margin: auto;
+
+    .logo {
+      margin-bottom: 0;
+    }
+
+    .login {
+      //var ionic
+      --background: white;
+
+      ion-card:last-child {
+        box-shadow: none;
+      }
+      .title {
+        display: block;
+      }
+    }
+
+    .submit {
+      width: 40%;
+      height: 2.86em;
+      background-color: $backgroundColor;
+      margin-top: 1.8em;
+      margin-bottom: 1em;
+      --border-radius: 3.57em;
+
+      .buttonContent {
+        color: black;
+        font-size: 16px;
+      }
+    }
+
+    .submit:hover {
+      background-color: $buttonColor;
+      border-radius: 3.57em;
+      .buttonContent {
+        color: $backgroundColor;
+      }
+    }
+  }
+}
