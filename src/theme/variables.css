@@ -4,3 +4,7 @@
 
 /* To quickly generate your own theme, check out the color generator */
 /* https://ionicframework.com/docs/theming/color-generator */
+:root{
+  --mainBackgroundColor: #1252a1;
+  --headerLightColor: white;
+}

@@ -1,0 +1,43 @@
+<ion-content>
+  <div class="container">
+    <ion-card class="login">
+      <!-- <ion-img src="../assets/img/logo.png" class="logo"></ion-img> -->
+      <ion-img src="../assets/img/logoec.png" class="logo"></ion-img>
+      <div class="title">
+        <h1>Bienvenido/a</h1>
+        <p>introduce tus credenciales para acceder</p>
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+        <ion-grid class="grid">
+          <div class="responsiveContainer">
+
+            <ion-row>
+              <ion-col>
+                <ion-item lines="none">
+                  <ion-label>Usuario</ion-label>
+                  <ion-input type="email" formControlName="email">
+                  </ion-input>
+                  <span *ngIf="isSubmitted" slot="error"> Introduzca un email válido</span>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col>
+                <ion-item lines="none">
+                  <ion-label>Contraseña</ion-label>
+                  <ion-input type="password" formControlName="password"> </ion-input>
+                  <span *ngIf="isSubmitted" slot="error"> Introduzca una contraseña</span>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-button type="submit" shape="full" class="submit"> <span class="buttonContent"> Acceder
+              </span>
+            </ion-button>
+          </div>
+        </ion-grid>
+      </form>
+    </ion-card>
+  </div>
+</ion-content>

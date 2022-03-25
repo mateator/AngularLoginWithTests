@@ -1,0 +1,18 @@
+ion-toolbar {
+  --background: var(--mainBackgroundColor);
+
+  ion-title {
+    color: var(--headerLightColor);
+  }
+  div {
+    justify-content: space-between;
+
+    display: flex;
+  }
+  ion-icon{
+    color: var(--headerLightColor);
+    height: auto;
+    font-size: 5em;
+    cursor: pointer;
+  }
+}

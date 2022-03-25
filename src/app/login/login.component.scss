@@ -1,0 +1,94 @@
+//login custom styles
+$border-color:#e8e8e8;
+$dark-color:#353535;
+$light-color:#939393;
+$button-color:#1352a1;
+
+.container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login {
+  width: 680px;
+  height: 575px;
+  border-radius: 10px;
+  padding: 75px;
+}
+
+//separamos el contenido horizontalmente, uno a cada extremo
+.reminder {
+  justify-content: space-between;
+}
+
+.reminder p {
+  color: $dark-color;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+
+
+.grid,
+.grid ion-col {
+  padding: 0.5em 0 0 0;
+
+  ion-item{
+    --inner-padding-end: 0;
+    --padding-start: 0;
+  }
+}
+
+.grid ion-label {
+  width: 140px;
+  font-size: 14px;
+  color: $light-color;
+}
+
+.grid ion-input {
+  border: 1px solid $border-color;
+}
+
+
+
+.logo {
+  width: 230px;
+  height: 60px;
+  //margin: arriba derecha abajo izq;
+  margin: 2.5em auto 3em auto;
+}
+
+.title{
+  h1{
+    font-size: 2em;
+    color: $dark-color;
+  }
+  p{
+    font-size: 1.3em;
+  }
+}
+
+.submit {
+  //para poder emplear minúsculas dentro del botón
+  text-transform: none;
+
+  width: 100%;
+  height: 40px;
+  margin-top: 3em;
+  background-color: $button-color;
+  //modificaciones a atributos/vars de ionic
+
+  .buttonContent {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+

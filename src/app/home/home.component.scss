@@ -1,0 +1,44 @@
+$GridItemBGColor:#fafafa;
+$GridItemBorderColor:#eaeaea;
+
+ion-grid {
+  padding: 0 2em 0 2em;
+  h1{
+    margin-left: 0.5em;
+  }
+}
+
+.employeeInput {
+  //con este cálculo el input encaja al 100% con los employees
+  width: calc(100% - 1em);
+  margin-left: 0.5em;
+}
+
+.employee {
+  background-color: $GridItemBGColor;
+  align-items: center;
+  margin: 0.5em;
+  padding: 0.5em;
+  border: 1px solid $GridItemBorderColor;
+
+  p,
+  h1,
+  h2 {
+    margin: 0;
+  }
+
+  p {
+    font-size: 0.8em;
+    color: #c7c3cf;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+}
+
+.img {
+  border-radius: 50%;
+}
